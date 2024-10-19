@@ -23,10 +23,10 @@ let counter = setInterval(function() {
     let minutes =Math.floor(dateDiff % (1000 * 60 * 60) / (1000* 60));
     let seconds =Math.floor(dateDiff % (1000 * 60) / 1000);
     
-    $(".days").html(days);
-    $(".hours").html(hours);
-    $(".minutes").html(minutes);
-    $(".seconds").html(seconds);
+    $(".days").html(`${days} D`);
+    $(".hours").html(` ${hours} h`);
+    $(".minutes").html(`${minutes} m`);
+    $(".seconds").html(`${seconds} s`);
     if(dateDiff <= 0){
         clearInterval(counter);
     }
